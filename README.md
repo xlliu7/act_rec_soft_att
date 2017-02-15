@@ -9,6 +9,17 @@ task at hand and attaches higher importance to them. We evaluate the model on UC
 (YouTube Action), HMDB-51 and Hollywood2 datasets and analyze how the model focuses its 
 attention depending on the scene and the action being performed.
 
+## Running the code
+In the action-recognition-visual-attention directory you can use the following commands to run the script files:
+```
+THEANO_FLAGS='floatX=float32,device=gpu0,mode=FAST_RUN,nvcc.fastmath=True' python -m scripts.evaluate_ucf11
+THEANO_FLAGS='floatX=float32,device=gpu1,mode=FAST_RUN,nvcc.fastmath=True' python -m scripts.evaluate_mAP
+THEANO_FLAGS='floatX=float32,device=gpu2,mode=FAST_RUN,nvcc.fastmath=True' python -m scripts.evaluate_hmdb51gln
+```
+
+## Visualizations
+The file `draw-visualizations.ipynb` is a sample IPython notebook for drawing visualizations.
+
 ## Dependencies
 
 * Python 2.7
